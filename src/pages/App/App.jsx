@@ -13,7 +13,7 @@ function App() {
     <main className="App">
       {user ?
         <>
-          <NavBar/>
+          <NavBar user={user} />
           <Route path="/actors">
             <ActorIndex />
           </Route>
