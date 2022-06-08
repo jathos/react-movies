@@ -5,6 +5,7 @@ import Login from '../Login/Login';
 import ActorIndex from '../ActorIndex/ActorIndex';
 import MovieIndex from '../MovieIndex/MovieIndex';
 import NavBar from '../../components/NavBar';
+import { movies } from './data';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,7 +19,7 @@ function App() {
             <ActorIndex />
           </Route>
           <Route path="/movies">
-            <MovieIndex />
+            <MovieIndex movies={movies} />
           </Route>
           <Redirect to="/movies" />
         </>

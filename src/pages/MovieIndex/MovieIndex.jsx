@@ -1,6 +1,11 @@
-function MovieIndex() {
+import MovieCard from '../../components/MovieCard';
+
+function MovieIndex({ movies }) {
     return (
-        <h1>Movie Index</h1>
+        <div>
+            <h1>Movie Index</h1>
+            {movies.map((ele, idx) => <MovieCard movie={ele} key={idx} />)}
+        </div>
     )
 }
 
