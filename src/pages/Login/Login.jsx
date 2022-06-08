@@ -1,8 +1,11 @@
-import { Component } from 'react';
+import LoginForm from "../../components/LoginForm";
 
-function Login() {
+function Login({ setUser, user }) {
     return (
-        <h1>Login</h1>
+        <>
+            <h1>Login</h1>
+            <LoginForm setUser={setUser} user={user} />
+        </>
     );
 };
 

@@ -8,9 +8,9 @@ function App() {
   const [user, setUser] = useState(null);
 
   return (
-    <div className="App">
-      {user ? <MovieIndex /> : <Login />}
-    </div>
+    <main className="App">
+      {user ? <MovieIndex /> : <Login setUser={setUser} user={user} />}
+    </main>
   );
 };
 
