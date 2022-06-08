@@ -14,7 +14,7 @@ export default class LoginForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.props.setUser(true);
+        this.props.setUser(this.state.name);
     }
 
     render() {
