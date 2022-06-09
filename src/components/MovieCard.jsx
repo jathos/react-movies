@@ -1,12 +1,17 @@
-import './MovieCard.css'
+import { Link, useParams } from 'react-router-dom';
+import './MovieCard.css';
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, id }) {
     return (
-        <div className="MovieCard" style={{ backgroundImage: `url(${movie.poster_path})` }
-        }>
-            <h2 className="cardText">{movie.title}</h2>
-            <p className="cardText">Released: {movie.release_date}</p>
-        </div >
+        <>
+            <Link to={`/movies/${id}`}>
+                <div className="MovieCard" style={{ backgroundImage: `url(${movie.poster_path})` }
+                }>
+                    <h2 className="cardText">{movie.title}</h2>
+                    <p className="cardText">Released: {movie.release_date}</p>
+                </div >
+            </Link>
+        </>
     );
 };
 
