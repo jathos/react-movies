@@ -1,0 +1,6 @@
+.ActorCard {
+    display: flex;
+    height: 10vh;
+    margin-bottom: 10px;
+    gap: 20px;
+}

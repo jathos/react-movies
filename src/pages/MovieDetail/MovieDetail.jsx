@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import CastItem from '../../components/CastItem';
+import ActorCard from '../../components/ActorCard';
 
 function MovieDetail({ movies }) {
     const { id } = useParams();
@@ -12,7 +12,7 @@ function MovieDetail({ movies }) {
             <img src={movies[id].poster_path} />
             <h3>Cast:</h3>
             <ul>
-                {movies[id].cast.map((ele, idx) => <CastItem actor={ele} key={idx} />)}
+                {movies[id].cast.map((ele, idx) => <ActorCard actor={ele} key={idx} />)}
             </ul>
         </div>
     );

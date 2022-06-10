@@ -17,7 +17,7 @@ function App() {
         <>
           <NavBar user={user} />
           <Route path="/actors">
-            <ActorIndex />
+            <ActorIndex movies={movies} />
           </Route>
           <Route exact path="/movies/:id">
             <MovieDetail movies={movies} />
